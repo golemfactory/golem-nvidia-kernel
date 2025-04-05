@@ -1,3 +1,11 @@
+golem-nvidia-kernel (6.1.132-2) jammy; urgency=medium
+
+  * Update to 6.1.132
+  * Use NVIDIA 570-server packages
+  * Adjust NVIDIA driver module name for server edition
+
+ -- Przemysław Rekucki <przemyslaw.rekucki@golem.network>  Sat, 05 Apr 2025 15:45:00 +0200
+
 golem-nvidia-kernel (6.1.132-1) jammy; urgency=medium
 
   * Update to 6.1.132
