@@ -1,3 +1,10 @@
+golem-nvidia-kernel (6.1.132-1) jammy; urgency=medium
+
+  * Update to 6.1.132
+  * Update NVIDIA drivers to 570 branch
+
+ -- Przemysław Rekucki <przemyslaw.rekucki@golem.network>  Fri, 05 Apr 2025 13:45:00 +0200
+
 golem-nvidia-kernel (6.1.97-1) jammy; urgency=medium
 
   * Update to 6.1.97

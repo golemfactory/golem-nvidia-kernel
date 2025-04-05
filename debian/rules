@@ -4,7 +4,7 @@ include /usr/share/dpkg/pkg-info.mk
 
 NVIDIA_DIRECTORIES := $(shell find /usr/src/ -maxdepth 1 -type d -name 'nvidia-*')
 NVIDIA_LATEST_VERSION := $(shell echo $(NVIDIA_DIRECTORIES) | tr ' ' '\n' | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+' | sort -rV | head -n 1)
-NVIDIA_PKG_VER := $(shell dpkg-query --showformat='$${Version}' --show nvidia-dkms-535)
+NVIDIA_PKG_VER := $(shell dpkg-query --showformat='$${Version}' --show nvidia-dkms-570)
 
 ifeq ($(shell lsb_release -si),Ubuntu)
 NVIDIA_MODULE=nvidia
@@ -101,5 +101,5 @@ override_dh_auto_install:
 		$(OUTPUT_DIR)/squashfs
 
 override_dh_gencontrol:
-	echo "nvidia:Version=nvidia-dkms-535 (= $(NVIDIA_PKG_VER))" >> $(CURDIR)/debian/golem-nvidia-kernel.substvars
+	echo "nvidia:Version=nvidia-dkms-570 (= $(NVIDIA_PKG_VER))" >> $(CURDIR)/debian/golem-nvidia-kernel.substvars
 	dh_gencontrol
