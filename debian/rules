@@ -7,7 +7,7 @@ NVIDIA_LATEST_VERSION := $(shell echo $(NVIDIA_DIRECTORIES) | tr ' ' '\n' | grep
 NVIDIA_PKG_VER := $(shell dpkg-query --showformat='$${Version}' --show nvidia-dkms-570-server)
 
 ifeq ($(shell lsb_release -si),Ubuntu)
-NVIDIA_MODULE=nvidia
+NVIDIA_MODULE=nvidia-srv
 else
 NVIDIA_MODULE=nvidia-current
 endif
